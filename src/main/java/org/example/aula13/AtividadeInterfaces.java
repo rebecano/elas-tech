@@ -3,65 +3,6 @@ package org.example.aula13;
 import java.util.ArrayList;
 import java.util.List;
 
-class Cachorro implements Animal {
-
-    @Override
-    public void emitirSom() {
-        System.out.println("Au au!");
-    }
-
-}
-
-class Gato implements Animal {
-
-    @Override
-    public void emitirSom() {
-        System.out.println("Miau!");
-    }
-}
-
-class Email implements Notificacao {
-
-    @Override
-    public void enviar(String mensagem){
-        System.out.println("E-mail enviado: " + mensagem);
-    }
-}
-
-class SMS implements Notificacao {
-
-    @Override
-    public void enviar(String mensagem) {
-        System.out.println("SMS enviado: " + mensagem);
-    }
-}
-
-class Carro implements Veiculo {
-
-    @Override
-    public void ligar() {
-        System.out.println("Ligando o carro...");
-    }
-
-    @Override
-    public void acelerar() {
-        System.out.println("Acelerando o carro");
-    }
-}
-
-class Moto implements Veiculo {
-
-    @Override
-    public void ligar() {
-        System.out.println("Ligando a moto...");
-    }
-
-    @Override
-    public void acelerar() {
-        System.out.println("Acelerando a moto");
-    }
-}
-
 public class AtividadeInterfaces {
     static void main() {
         // 1. Crie uma interface Animal com o método emitirSom(). Crie a classe Cachorro que implementa ela e imprime "Au au!". Na Main, crie um cachorro e chame o método. Não esqueça do @Override.
@@ -95,7 +36,6 @@ public class AtividadeInterfaces {
 
         /*
         4. Crie uma interface Notificacao com o método enviar(String mensagem). Crie duas classes que implementam ela: Email e SMS. Cada uma imprime de um jeito. Adicione as duas num ArrayList<Notificacao> e percorra com for-each, enviando a mesma mensagem.
-
         Saída esperada:
         E-mail enviado: Sua compra foi aprovada!
         SMS enviado: Sua compra foi aprovada!
@@ -108,7 +48,6 @@ public class AtividadeInterfaces {
         for (Notificacao notificacao : listaNotificacoes) {
             notificacao.enviar("Sua compra foi aprovada!");
         }
-
 
 
         // 5. Crie uma interface Veiculo com DOIS métodos: ligar() e acelerar(). Crie Carro e Moto implementando os dois. Coloque numa lista e percorra com for-each chamando os dois métodos em cada um.
